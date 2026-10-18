@@ -86,6 +86,18 @@ A confident claim with no support offered. Might be true. Isn't argued
 
 > At best, it has no effect on my gaming whatsoever. But in reality, all it does is ramp up the exclusives game, and makes it even more likely that sony will grab even more games and make them exclusive, harming me.
 
+### `label_three` Reaction
+
+Response to someone, reaction based on an event, action, comment
+
+**Example 1:**
+
+> That feels quite normal procedure tbh
+
+**Example_2:**
+
+> I’m actually a little shocked at, not only how good it looks, but how well optimized it is too. Barely any major performance drops.
+
 ### The hardest boundary
 
 **Which two labels:**Analysis and Hot-takes
