@@ -60,38 +60,43 @@ Price vs. Exclusivity Discussions: A post is about Price when it compares what a
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `label_one` Analysis
 
 **Definition:**
+Makes an argument backed by a specific, checkable fact. A stat, a date, a quote
 
 **Example 1:**
 
->
+> This is the worst time in Xbox history to be a Xbox gamer. 7 year old console. $800 for a 7 year old console that was $275 a year after release and $300 for years. Xbox gave Playstation all their exclusives. Claimed your microwave and toaster were also Xbox's. Playstation released a Pro console years ago and Xbox did nothing.
 
 **Example 2:**
 
->
+> Microsoft literally said that when Sony announced the Pro. They said that not one single developer has even remotely tapped the potential of these consoles yet this generation.
 
-### `label_two`
+### `label_two` Hot take
 
 **Definition:**
+A confident claim with no support offered. Might be true. Isn't argued
 
 **Example 1:**
 
->
+> If buying games isn’t owning them, piracy isn’t stealing
 
 **Example 2:**
 
->
+> At best, it has no effect on my gaming whatsoever. But in reality, all it does is ramp up the exclusives game, and makes it even more likely that sony will grab even more games and make them exclusive, harming me.
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:**Analysis and Hot-takes
 
 **The decision rule I used every time:**
 
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
+
+     If the post names a specific checkable fact, it's `analysis`, even
+     if the tone is heated.
 
 ---
 
