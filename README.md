@@ -63,7 +63,7 @@ Price vs. Exclusivity Discussions: A post is about Price when it compares what a
 ### `label_one` Analysis
 
 **Definition:**
-Makes an argument backed by a specific, checkable fact. A stat, a date, a quote
+Makes an argument to support a statement and contains a conclusion or observation based on the argument. Even without the specification of verifiable facts such as a stat, a date, a quote.
 
 **Example 1:**
 
@@ -117,18 +117,19 @@ Response to someone, reaction based on an event, action, comment
 <!-- Where you collected from, how you labelled, your counts, and three hard
      cases. -->
 
-**Where the posts came from:**
+**Where the posts came from:** The posts came from the Xbox's reddit community
 
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
+About 50% of the of posts where cold labeled first, and the rest were Pre-labelled with AI and then corrected some.
 
 **Counts per label:**
 
 | Label     | Count | Share |
 | --------- | ----- | ----- |
-|           |       |       |
-|           |       |       |
-|           |       |       |
+| reaction  | 82    | 41    |
+| analysis  | 65    | 32.5  |
+| hot-take  | 53    | 26.5  |
 | **Total** |       | 100%  |
 
 **Three hard cases**
@@ -138,27 +139,27 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 **1.**
 
-> _The post:_
+> \_The post:\_Microsoft literally said that when Sony announced the Pro. They said that not one single developer has even remotely tapped the potential of these consoles yet this generation.
 >
-> _Could have been:_
+> \_Could have been:\_hot_take
 >
-> _I chose, because:_
+> \_I chose, because:\_analysis
 
 **2.**
 
-> _The post:_
+> _The post:_ I went from one to one x. I've not noticed a difference. I'm not saying there isn't one but when you plug something new and shiny in you want to be blown away and it was same old same old. Having the same os interface didn't help
 >
-> _Could have been:_
+> _Could have been:_ hot-take
 >
-> _I chose, because:_
+> _I chose, because:_ reaction. It reports the writer's own experience of upgrading, not a checkable fact. It does make a general claim about the hardware, though, so hot-take is a close second.
 
 **3.**
 
-> _The post:_
+> _The post:_ Don't know why you're getting downvoted but I think it's the reverse engineering / combining of games we've been seeing. Eg skate in cod.
 >
-> _Could have been:_
+> _Could have been:_ hot-take
 >
-> _I chose, because:_
+> _I chose, because:_ analysis. The named example (skate in cod) is a specific, checkable fact. It is thin, though, and it illustrates a belief rather than carrying the argument, so hot-take is defensible.
 
 ---
 
