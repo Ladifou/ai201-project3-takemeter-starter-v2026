@@ -42,13 +42,7 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
-     Community: Xbox
-
-Price vs. Games Quality: A post is about Price when the author judges the cost (subscription, hardware, or a game's price tag) relative to what they get. It is about Games Quality when the author judges the product itself, such as performance, bugs, or content, regardless of what it costs. For example, "Game Pass is too expensive" is Price, while "Game Pass has too many empty games" is Games Quality.
-
-Games Quality vs. Exclusivity Discussions: A post is about Games Quality when the complaint or praise would still apply if the game were on every platform. It is about Exclusivity Discussions when the point depends on where the game is or isn't available, such as a timed exclusive or a title skipping PlayStation. For example, "This game runs at 30 fps" is Games Quality, while "Why is this only on Xbox?" is Exclusivity.
-
-Price vs. Exclusivity Discussions: A post is about Price when it compares what a user pays with what they receive. It is about Exclusivity when it argues about access, meaning which platform can play a game at all, even if the price is mentioned. For example, "I'd pay more for this if it weren't locked to Xbox" mentions money but is mainly about Exclusivity, while "This should be $40, not $70" is Price.
+The community is Xbox: players discussing Xbox consoles, Game Pass, and Xbox games. The classifier sorts each post into one of three categories: Price, Games Quality, or Exclusivity Discussions. A post is Price when the author judges cost against what they get, Games Quality when the author judges the product itself regardless of cost, and Exclusivity Discussions when the point depends on which platform can play a game. Where a post touches more than one category, it goes to the one the author's main argument rests on.
 
 ---
 
@@ -129,7 +123,7 @@ About 50% of the of posts where cold labeled first, and the rest were Pre-labell
 | --------- | ----- | ----- |
 | reaction  | 82    | 41    |
 | analysis  | 65    | 32.5  |
-| hot-take  | 53    | 26.5  |
+| hot_take  | 53    | 26.5  |
 | **Total** |       | 100%  |
 
 **Three hard cases**
@@ -149,17 +143,17 @@ About 50% of the of posts where cold labeled first, and the rest were Pre-labell
 
 > _The post:_ I went from one to one x. I've not noticed a difference. I'm not saying there isn't one but when you plug something new and shiny in you want to be blown away and it was same old same old. Having the same os interface didn't help
 >
-> _Could have been:_ hot-take
+> _Could have been:_ hot_take
 >
-> _I chose, because:_ reaction. It reports the writer's own experience of upgrading, not a checkable fact. It does make a general claim about the hardware, though, so hot-take is a close second.
+> _I chose, because:_ reaction. It reports the writer's own experience of upgrading, not a checkable fact. It does make a general claim about the hardware, though, so hot_take is a close second.
 
 **3.**
 
 > _The post:_ Don't know why you're getting downvoted but I think it's the reverse engineering / combining of games we've been seeing. Eg skate in cod.
 >
-> _Could have been:_ hot-take
+> _Could have been:_ hot_take
 >
-> _I chose, because:_ analysis. The named example (skate in cod) is a specific, checkable fact. It is thin, though, and it illustrates a belief rather than carrying the argument, so hot-take is defensible.
+> _I chose, because:_ analysis. The named example (skate in cod) is a specific, checkable fact. It is thin, though, and it illustrates a belief rather than carrying the argument, so hot_take is defensible.
 
 ---
 
@@ -168,14 +162,27 @@ About 50% of the of posts where cold labeled first, and the rest were Pre-labell
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
 **Base model:**
-
+"distilbert-base-uncased"
 **Settings:** <!-- epochs, learning rate, batch size, seed -->
+EPOCHS = 3
+LEARNING_RATE = 2e-5
+BATCH_SIZE = 16
+SEED=42
 
 **Anything I changed from the defaults, and why:**
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
 split. If a label had fewer than about 8 in test, say so — it explains a lot
 of next unit's variance. -->
+
+train 139 · val 31 · test 30
+
+          train  val  test
+
+label  
+analysis 45 10 10
+hot_take 37 8 8
+reaction 57 13 12
 
 ---
 
@@ -189,18 +196,20 @@ of next unit's variance. -->
      problem. -->
 
 **Moment 1**
+Used Claude to update the hot-take label to hot_take accross an entire file
 
-- _What I asked for:_
-- _What came back:_
-- _What I changed:_
+- _What I asked for:_ Update hot-take to hot_take in the current file
+- _What came back:_ A refactored file with all the hot takes updated accurately
+- _What I changed:_ Nothing
 
 **Moment 2**
 
-- _What I asked for:_
-- _What came back:_
-- _What I changed:_
+- _What I asked for:_ Read my label definitions and one post that sits between two of them. Make the strongest case for each of the two labels. Don't tell me which one is right and don't rewrite my definitions."
+- _What came back:_ Two strong case for why a post of mine could had been an analysis or hot_take
+- _What I changed:_ Nothing.
 
 **Pre-labelling disclosure:**
+A portion of the posts were label with claude. Some were review and updated as needed.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
